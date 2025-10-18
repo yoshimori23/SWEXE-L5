@@ -1,0 +1,8 @@
+<% @tweets.each do |u| %>
+  <p>
+      <%= u.message %>
+      <%= u.user_id %>
+      <%= link_to '削除', tweet_path(u), data: {turbo_method: :delete} %>
+  </p>
+<% end %>
+<p><%= link_to '新規追加', new_tweet_path %></p>
